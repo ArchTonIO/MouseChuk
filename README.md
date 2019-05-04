@@ -1,4 +1,4 @@
-# MouseChuck
+# MouseChuk
 Arduino+python pyautogui to control cursor with a Wii nunchuk
 
 Code is divided in two main parts : Arduino code and python code.
