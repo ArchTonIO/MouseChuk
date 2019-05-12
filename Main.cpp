@@ -29,11 +29,11 @@ void mapValues(){
       delay(100);
 
     }
-    if(nunchuk_accelY()>=50){
+    if(nunchuk_accelY()>=100){
         x = 354;
         delay(100);
     }
-    if(nunchuk_accelY()<= -50){
+    if(nunchuk_accelY()<= -100){
         y = 657;
         delay(100);
     }
