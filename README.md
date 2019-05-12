@@ -9,17 +9,11 @@ The python code uses the library pyautogui to move the cursor using the values a
 
 The use and setup is simple: connect the nunchuk to arduino through jumper cables, you need 4 different cabled to connect 3.3v, gnd, data1 and data2. 
 Load the code into arduino, and run the python script using python3 from cli.
-In line 4 of file MouseChuk.py you can modify the serial port depending on wich you are using.
-At the first run python may encounters a problem, like:
-File "MouseChuck.py", line 16, in <module>
-    x = float(ser.readline().strip())		
-ValueError: could not convert string to float:
-. 
- 
-Just run the code again (and again if necessary), it will work.
-So, now you can use the nunchuk as a mouse, the joystick control the cursor, C burtton is the left click, Z, the right.
-I had to implement the scrolling using the nunchuk accelerometer, and fix lot of bugs, like the previous I described.
-This cod works perfectly on my machine, a desktop computer running Arch Linux, but I'm pretty sure will work even on other Linux, Windows, and MacOS machines, it will work on every screen size, !Does not work well on multi-monitor systems!
+In line 4 of file MouseChuk.py you can modify the serial port depending on wich you are using, in line 6 and 8 you can modify the cursor speed and the scroll speed, in line 9 you can turn on and off the auto-rerun, it rerun the code automatically when serial communication fails, I suggest to not modify is status, if setted on "false" the program will fail multiple times.
+
+So, now you can use the nunchuk as a mouse, the joystick control the cursor, C burtton is the left click, Z, the right, the hand's movements controls the up and down scroll.
+
+This cod works perfectly on my machine, a desktop computer running Arch Linux, but I'm pretty sure will work even on other Linux, Windows, and MacOS machines, it will work on every screen size, !Does not work on multi-monitor systems!
 It's not tested for games, but it will be the best final usage, so try it.
 
 So you need:
@@ -30,7 +24,7 @@ So you need:
 -python pyautogui library installed
 -python serial library installed
 
-This is a totally experimental project, there are lot of things to fix or adjust, so use it and work on it to fix your needs.
+This is a totally experimental project, there are lot of things to fix or adjust, so use it and work on it to fit your needs.
 The operation is pretty simple: Arudino read values from nunchuk sensors, calculates the x and y movements with some math, and sends values through Serial, the Python3 code read the values from serial, does some math, and uses pyautogui to move the cursor.
 
 
