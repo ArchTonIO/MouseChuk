@@ -17,8 +17,8 @@ void mapValues(){
         angle = 0;
 
     }
-    x = map(nunchuk_joystickX(), -102, 103, 0, 100);
-    y = map(nunchuk_joystickY(), -103, 98, 0, 100);
+    x = map(nunchuk_joystickX(), -102, 103, 0, 20);
+    y = map(nunchuk_joystickY(), -103, 98, 0, 20);
     if(nunchuk_buttonC() == 1){
       x = 547;
       delay(100);
@@ -28,6 +28,14 @@ void mapValues(){
       y = 896;
       delay(100);
 
+    }
+    if(nunchuk_accelY()>=50){
+        x = 354;
+        delay(100);
+    }
+    if(nunchuk_accelY()<= -50){
+        y = 657;
+        delay(100);
     }
 
 }
@@ -53,6 +61,7 @@ void printAllData(){
   Serial.print("||");
   Serial.print(nunchuk_joystickY_raw());
   Serial.print("||");
+  Serial.print(nunchuk_accelY());
   Serial.print("\n");
   delay(500);
 }
