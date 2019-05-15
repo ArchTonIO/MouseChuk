@@ -13,7 +13,7 @@ In line 4 of file MouseChuk.py you can modify the serial port depending on wich 
 
 So, now you can use the nunchuk as a mouse, the joystick control the cursor, C burtton is the left click, Z, the right, the hand's movements controls the up and down scroll.
 
-This cod works perfectly on my machine, a desktop computer running Arch Linux, but I'm pretty sure will work even on other Linux, Windows, and MacOS machines, it will work on every screen size, !Does not work on multi-monitor systems!
+This code works perfectly on my machine, a desktop computer running Arch Linux, but I'm pretty sure will work even on other Linux, Windows, and MacOS machines, it will work on every screen size, !Does not work on multi-monitor systems!
 It's not tested for games, but it will be the best final usage, so try it.
 
 So you need:
